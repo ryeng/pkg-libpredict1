@@ -1,0 +1,25 @@
+Source: libpredict1
+Priority: optional
+Maintainer: Norvald H. Ryeng <norvald@ryeng.name>
+Build-Depends: cmake, debhelper (>= 9), dpkg-dev (>= 1.16.1~)
+Standards-Version: 3.9.6
+Section: libs
+Homepage: https://la1k.github.io/libpredict/
+Vcs-Git: https://github.com/la1k/libpredict.git
+Vcs-Browser: https://github.com/la1k/libpredict
+
+Package: libpredict1-dev
+Section: libdevel
+Architecture: any
+Depends: libpredict1 (= ${binary:Version}), ${misc:Depends}
+Description: Development files for libpredict1
+ Libpredict provides functions to calculate solar, lunar and satellite
+ positions from orbit parameters.
+
+Package: libpredict1
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Satellite orbit prediction library
+ Libpredict provides functions to calculate solar, lunar and satellite
+ positions from orbit parameters.
